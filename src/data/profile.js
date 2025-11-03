@@ -1,10 +1,14 @@
 export const profile = {
-  name: "João Silva",
+  name: "Gustavo Gualda",
   title: "Desenvolvedor Full Stack",
+  greeting: "🚀 Disponível para novos projetos",
+  yearExperience: "5+",
+  projectCompleted: "50+",
+  clientSatisfaction: "100%",
   description:
     "Transformo ideias em soluções digitais completas. Especialista em React, Node.js e tecnologias modernas.",
   image:
-    "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+    "https://avatars.githubusercontent.com/u/104951600?v=4",
   buttons: [
     {
       text: "Ver Projetos",

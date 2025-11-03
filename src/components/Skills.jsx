@@ -1,43 +1,90 @@
-import { frontend, backend } from '../data/skills';
+import { frontend, backend, otherSkills } from '../data/skills';
 
-export default function Skills(){
+export default function Skills() {
   return (
-    <section id="skills" className="py-20 bg-gray-50">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16 fade-in">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Habilidades Técnicas</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">Domino uma ampla gama de tecnologias modernas para desenvolvimento web completo.</p>
+    <section id="skills" className="py-20 bg-white relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:16px_16px]"></div>
+      
+      {/* Decorative Elements */}
+      <div className="absolute top-20 left-10 w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-40 right-20 w-6 h-6 bg-blue-300 rounded-full animate-pulse delay-500"></div>
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium">
+            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+            Tecnologias e ferramentas
+          </div>
+
+          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            Habilidades Técnicas
+          </h2>
+          
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            Domino uma ampla gama de tecnologias modernas para desenvolvimento web completo e soluções escaláveis.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12">
-          <div className="fade-in">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-8">Frontend</h3>
+        {/* Skills Grid */}
+        <div className="grid lg:grid-cols-2 gap-12 mb-12">
+          {/* Frontend Skills */}
+          <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-xl">
+                ⚛️
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Frontend</h3>
+            </div>
+            
             <div className="space-y-6">
-              {frontend.map((f,i)=>(
-                <div key={i}>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-700 font-medium">{f.name}</span>
-                    <span className="text-gray-500">{f.value}</span>
+              {frontend.map((skill, index) => (
+                <div key={index} className="group">
+                  <div className="flex justify-between items-center mb-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-lg">{skill.icon}</span>
+                      <span className="font-semibold text-gray-900">{skill.name}</span>
+                    </div>
+                    <span className="text-gray-500 font-medium">{skill.value}</span>
                   </div>
-                  <div className="bg-gray-200 rounded-full h-3">
-                    <div className="bg-blue-600 h-3 rounded-full skill-bar" data-width={f.value} style={{width: f.value}}></div>
+                  <div className="bg-gray-100 rounded-full h-3 overflow-hidden">
+                    <div 
+                      className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000 ease-out group-hover:from-blue-600 group-hover:to-blue-700"
+                      style={{ width: skill.value }}
+                      data-level={skill.level}
+                    ></div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="fade-in">
-            <h3 className="text-2xl font-semibold text-gray-800 mb-8">Backend</h3>
+          {/* Backend Skills */}
+          <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white text-xl">
+                🖥️
+              </div>
+              <h3 className="text-2xl font-bold text-gray-900">Backend</h3>
+            </div>
+            
             <div className="space-y-6">
-              {backend.map((b,i)=>(
-                <div key={i}>
-                  <div className="flex justify-between mb-2">
-                    <span className="text-gray-700 font-medium">{b.name}</span>
-                    <span className="text-gray-500">{b.value}</span>
+              {backend.map((skill, index) => (
+                <div key={index} className="group">
+                  <div className="flex justify-between items-center mb-3">
+                    <div className="flex items-center gap-3">
+                      <span className="text-lg">{skill.icon}</span>
+                      <span className="font-semibold text-gray-900">{skill.name}</span>
+                    </div>
+                    <span className="text-gray-500 font-medium">{skill.value}</span>
                   </div>
-                  <div className="bg-gray-200 rounded-full h-3">
-                    <div className="bg-green-600 h-3 rounded-full skill-bar" data-width={b.value} style={{width: b.value}}></div>
+                  <div className="bg-gray-100 rounded-full h-3 overflow-hidden">
+                    <div 
+                      className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-1000 ease-out group-hover:from-green-600 group-hover:to-green-700"
+                      style={{ width: skill.value }}
+                      data-level={skill.level}
+                    ></div>
                   </div>
                 </div>
               ))}
@@ -45,6 +92,36 @@ export default function Skills(){
           </div>
         </div>
 
+        {/* Other Skills */}
+        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+          <div className="flex items-center gap-3 mb-8">
+            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-xl">
+              🛠️
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900">Outras Ferramentas</h3>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            {otherSkills.map((skill, index) => (
+              <div key={index} className="group">
+                <div className="flex justify-between items-center mb-3">
+                  <div className="flex items-center gap-3">
+                    <span className="text-lg">{skill.icon}</span>
+                    <span className="font-semibold text-gray-900">{skill.name}</span>
+                  </div>
+                  <span className="text-gray-500 font-medium">{skill.value}</span>
+                </div>
+                <div className="bg-gray-100 rounded-full h-3 overflow-hidden">
+                  <div 
+                    className="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-1000 ease-out group-hover:from-purple-600 group-hover:to-purple-700"
+                    style={{ width: skill.value }}
+                    data-level={skill.level}
+                  ></div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
