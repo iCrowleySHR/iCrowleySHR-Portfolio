@@ -72,6 +72,13 @@ export const frontend = [
 ];
 
 export const backend = [
+    {
+    name: "C#",
+    value: "80%",
+    level: 80,
+    icon: "https://skillicons.dev/icons?i=cs",
+    category: "Language"
+  },
   {
     name: "Node.js",
     value: "93%",
@@ -179,12 +186,5 @@ export const otherSkills = [
     level: 75,
     icon: "https://skillicons.dev/icons?i=ae",
     category: "Motion Design"
-  },
-  {
-    name: "C#",
-    value: "80%",
-    level: 80,
-    icon: "https://skillicons.dev/icons?i=cs",
-    category: "Language"
   }
 ];

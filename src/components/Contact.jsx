@@ -139,13 +139,13 @@ export default function Contact() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
-                href="mailto:joao.silva@email.com"
+                href="mailto:gustavogualda6@gmail.com"
                 className="bg-blue-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-blue-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
               >
                 Enviar Email
               </a>
               <a 
-                href="https://wa.me/5511999999999"
+                href="https://wa.me/5511963338067"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-300 hover:-translate-y-1"
