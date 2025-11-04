@@ -1,38 +1,20 @@
 export const education = [
+{
+    title: "Tecnólogo em Desenvolvimento de Software Multiplataforma",
+    school: "Fatec Ciuliano Checcetini - Franco da Rocha",
+    year: "2025 - 2027",
+    description: "Formação completa em desenvolvimento de sistemas para múltiplas plataformas, abrangendo web, mobile e cloud. Curso integrou tecnologias modernas como IoT, machine learning, bancos de dados relacionais e não relacionais, segurança e engenharia de software.",
+    tags: ["Desenvolvimento Web", "Mobile", "Cloud Computing", "IoT", "Machine Learning", "Banco de Dados", "APIs", "UX/UI"],
+    icon: "💻",
+    logo: "../../images/logos/fatec-identidade.jpg" 
+  },
   {
-    title: "Bacharelado em Ciência da Computação",
-    school: "Universidade Federal de Tecnologia",
-    year: "2018 - 2022",
-    description: "Formação completa em fundamentos da computação, algoritmos, estrutura de dados, arquitetura de software e engenharia de sistemas.",
-    tags: ["Algoritmos", "Estrutura de Dados", "Banco de Dados", "Redes", "IA"],
+    title: "Técnico em Informática para Internet (MTec Novotec Integrado)",
+    school: "ETEC Dr. Emílio Hernandez Aguilar",
+    year: "2022 - 2024",
+    description: "Formação técnica integrada ao Ensino Médio com ênfase em desenvolvimento web, design de interfaces e programação. Desenvolvi competências em front-end, back-end, banco de dados, UX/UI e segurança da informação, com carga horária de 3.000 horas incluindo disciplinas de Inglês e Espanhol.",
+    tags: ["HTML/CSS", "JavaScript", "PHP", "MySQL", "UX/UI", "React", "Git", "Espanhol"],
     icon: "🎓",
-    logo: "/images/logos/fatec-logo.png" 
+    logo: "../../images/logos/etec-identidade.jpg" 
   },
-  {
-    title: "Pós-graduação em Desenvolvimento Full Stack",
-    school: "Digital Tech Academy",
-    year: "2023 - 2024",
-    description: "Especialização em tecnologias modernas de desenvolvimento web e mobile, incluindo React, Node.js, cloud computing e DevOps.",
-    tags: ["React", "Node.js", "AWS", "Docker", "DevOps"],
-    icon: "🚀",
-    logo: "/images/logos/digital-tech-logo.png"
-  },
-  {
-    title: "Curso Intensivo de UX/UI Design",
-    school: "Design Innovation School",
-    year: "2022",
-    description: "Curso focado em design centrado no usuário, prototipagem, design system e ferramentas modernas de design como Figma e Adobe XD.",
-    tags: ["Figma", "UX Research", "UI Design", "Prototipagem", "Design System"],
-    icon: "🎨",
-    logo: "/images/logos/design-school-logo.png"
-  },
-  {
-    title: "Certificação Cloud Practitioner",
-    school: "Amazon Web Services",
-    year: "2023",
-    description: "Certificação oficial AWS com foco em fundamentos de cloud computing, serviços AWS e melhores práticas de infraestrutura na nuvem.",
-    tags: ["AWS", "Cloud Computing", "Infraestrutura", "DevOps", "S3"],
-    icon: "☁️",
-    logo: "/images/logos/aws-logo.png"
-  }
 ];

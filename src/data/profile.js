@@ -1,14 +1,13 @@
 export const profile = {
   name: "Gustavo Gualda",
-  title: "Desenvolvedor Full Stack",
+  title: "Desenvolvedor Full Stack | DevOps",
   greeting: "🚀 Disponível para novos projetos",
-  yearExperience: "5+",
-  projectCompleted: "50+",
+  yearExperience: "4+",
+  projectCompleted: "13+",
   clientSatisfaction: "100%",
   description:
-    "Transformo ideias em soluções digitais completas. Especialista em React, Node.js e tecnologias modernas.",
-  image:
-    "https://avatars.githubusercontent.com/u/104951600?v=4",
+    "Transformo ideias em soluções digitais completas. Especialista em React, AWS, Laravel e tecnologias modernas.",
+  image:"../../public/images/profile/icrowleyshr.jpeg",
   buttons: [
     {
       text: "Ver Projetos",
@@ -16,7 +15,7 @@ export const profile = {
       type: "primary",
     },
     {
-      text: "📄 Baixar Currículo",
+      text: "Baixar Currículo",
       href: "https://drive.google.com/file/d/1234567890/view",
       target: "_blank",
       type: "secondary",

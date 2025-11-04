@@ -54,37 +54,31 @@ const colorClasses = {
 export default function About() {
   return (
     <section id="about" className="py-20 bg-white relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:16px_16px]"></div>
-      
-      {/* Decorative Elements */}
+
       <div className="absolute top-20 right-10 w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
       <div className="absolute bottom-40 left-20 w-6 h-6 bg-blue-300 rounded-full animate-pulse delay-500"></div>
       <div className="absolute top-1/2 right-32 w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-700"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Text Content */}
           <div className="text-center lg:text-left">
-            {/* Badge */}
+  
             <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium">
               <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
               {about.badge.text}
             </div>
 
-            {/* Title */}
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-8">
               {about.title}
             </h2>
 
-            {/* Description */}
             {about.description.map((paragraph, index) => (
               <p key={index} className="text-lg text-gray-600 mb-6 leading-relaxed">
                 {paragraph}
               </p>
             ))}
 
-            {/* Skills Tags */}
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
               {about.skills.map((skill, index) => {
                 const color = colorClasses[skill.color] || colorClasses.blue;
@@ -100,7 +94,6 @@ export default function About() {
             </div>
           </div>
 
-          {/* Experience Cards */}
           <div className="space-y-6">
             {about.experiences.map((exp, index) => {
               const color = colorClasses[exp.color] || colorClasses.blue;

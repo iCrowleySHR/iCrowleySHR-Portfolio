@@ -4,32 +4,32 @@ export const contact = {
   contacts: [
     {
       type: "Email",
-      value: "joao.silva@email.com",
-      href: "mailto:joao.silva@email.com",
+      value: "gustavogualda6@gmail.com",
+      href: "mailto:gustavogualda6@gmail.com",
       icon: "EmailIcon",
       color: "blue",
       description: "Respondo em até 24 horas"
     },
     {
       type: "Telefone", 
-      value: "+55 (11) 99999-9999",
-      href: "tel:+5511999999999",
+      value: "+55 (11) 96333-8067",
+      href: "tel:+5511963338067",
       icon: "PhoneIcon",
       color: "green",
       description: "Disponível das 9h às 18h"
     },
     {
       type: "LinkedIn",
-      value: "linkedin.com/in/joaosilva",
-      href: "https://linkedin.com/in/joaosilva",
+      value: "linkedin.com/in/gustavogualda",
+      href: "https://linkedin.com/in/gustavogualda",
       icon: "LinkedInIcon",
-      color: "purple",
+      color: "blue",
       description: "Conecte-se profissionalmente"
     },
     {
       type: "GitHub",
-      value: "github.com/joaosilva", 
-      href: "https://github.com/joaosilva",
+      value: "github.com/icrowleyshr", 
+      href: "https://github.com/icrowleyshr",
       icon: "GitHubIcon",
       color: "gray",
       description: "Veja meus projetos"

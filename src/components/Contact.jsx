@@ -1,6 +1,6 @@
 import { contact } from '../data/contact';
 
-// Componentes de ícones SVG
+
 const EmailIcon = () => (
   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -70,15 +70,12 @@ const colorClasses = {
 export default function Contact() {
   return (
     <section id="contact" className="py-20 bg-white relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:16px_16px]"></div>
       
-      {/* Decorative Elements */}
       <div className="absolute top-20 right-10 w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
       <div className="absolute bottom-40 left-20 w-6 h-6 bg-blue-300 rounded-full animate-pulse delay-500"></div>
 
       <div className="max-w-4xl mx-auto px-6 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
@@ -94,7 +91,6 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Contact Cards */}
         <div className="max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
             Informações de Contato
@@ -112,12 +108,10 @@ export default function Contact() {
                   rel={item.href.startsWith('http') ? 'noopener noreferrer' : ''}
                   className="flex items-center gap-4 bg-white p-6 rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
                 >
-                  {/* Icon */}
                   <div className={`w-12 h-12 ${color.bg} rounded-xl flex items-center justify-center ${color.text} group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent icon={item.icon} />
                   </div>
 
-                  {/* Content */}
                   <div className="flex-1">
                     <p className="font-bold text-gray-900 text-lg mb-1">
                       {item.type}
@@ -135,7 +129,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Call to Action */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 border border-blue-200">
             <h3 className="text-2xl font-bold text-gray-900 mb-4">

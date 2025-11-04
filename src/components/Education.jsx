@@ -3,15 +3,12 @@ import { education } from '../data/education';
 export default function Education() {
   return (
     <section id="education" className="py-20 bg-white relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:16px_16px]"></div>
       
-      {/* Decorative Elements */}
       <div className="absolute top-20 left-10 w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
       <div className="absolute bottom-40 right-20 w-6 h-6 bg-blue-300 rounded-full animate-pulse delay-500"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
@@ -27,7 +24,6 @@ export default function Education() {
           </p>
         </div>
 
-        {/* Education Cards */}
         <div className="grid lg:grid-cols-2 gap-8">
           {education.map((item, index) => (
             <div 
@@ -35,7 +31,6 @@ export default function Education() {
               className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group"
             >
               <div className="flex items-start gap-6">
-                {/* Logo/Icon Container */}
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-2xl flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300 overflow-hidden">
                   {item.logo ? (
                     <img 
@@ -48,7 +43,6 @@ export default function Education() {
                   )}
                 </div>
 
-                {/* Content */}
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                     {item.title}
@@ -67,7 +61,6 @@ export default function Education() {
                     {item.description}
                   </p>
 
-                  {/* Tags */}
                   <div className="flex flex-wrap gap-2">
                     {item.tags.map((tag, tagIndex) => (
                       <span 

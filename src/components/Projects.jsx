@@ -3,15 +3,12 @@ import { projects } from '../data/projects';
 export default function Projects() {
   return (
     <section id="projects" className="py-20 bg-white relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:16px_16px]"></div>
       
-      {/* Decorative Elements */}
       <div className="absolute top-20 right-10 w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
       <div className="absolute bottom-40 left-20 w-6 h-6 bg-blue-300 rounded-full animate-pulse delay-500"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium">
             <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
@@ -27,14 +24,13 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index}
               className="bg-white rounded-2xl shadow-lg border border-gray-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group overflow-hidden"
             >
-              {/* Project Image/Emoji */}
+
               <div className="h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center relative overflow-hidden">
                 {project.image ? (
                   <img 
@@ -48,7 +44,6 @@ export default function Projects() {
                   </span>
                 )}
                 
-                {/* Featured Badge */}
                 {project.featured && (
                   <div className="absolute top-4 left-4 bg-yellow-500 text-white px-3 py-1 rounded-full text-xs font-bold">
                     ⭐ Destaque
@@ -56,7 +51,6 @@ export default function Projects() {
                 )}
               </div>
 
-              {/* Project Content */}
               <div className="p-6">
                 <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
                   {project.title}
@@ -66,7 +60,6 @@ export default function Projects() {
                   {project.description}
                 </p>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.techs.map((tech, techIndex) => (
                     <span 
@@ -78,7 +71,6 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Buttons */}
                 <div className="flex gap-3">
                   <a 
                     href={project.demo} 

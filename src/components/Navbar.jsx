@@ -9,8 +9,6 @@ export default function Navbar() {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
 
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
             {navbar.links.map(link => (
               <a
@@ -23,7 +21,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <a
               href={navbar.cta.href}
@@ -33,7 +30,6 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile Menu Button */}
           <button 
             className="md:hidden text-gray-700 p-2"
             onClick={() => setOpen(!open)}
@@ -49,7 +45,6 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {open && (
           <div className="md:hidden mt-4 pb-4 border-t border-gray-200 pt-4">
             <div className="flex flex-col space-y-4">
@@ -64,7 +59,6 @@ export default function Navbar() {
                 </a>
               ))}
               
-              {/* Mobile CTA */}
               <a
                 href={navbar.cta.href}
                 onClick={() => setOpen(false)}

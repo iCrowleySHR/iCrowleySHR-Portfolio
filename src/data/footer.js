@@ -5,24 +5,20 @@ export const footer = {
 
   social: [
     {
-      icon: "💼",
       label: "LinkedIn",
-      href: "https://linkedin.com/in/joaosilva",
+      href: "https://linkedin.com/in/gustavogualda",
     },
     {
-      icon: "🐙",
-      label: "GitHub",
-      href: "https://github.com/joaosilva",
+      label: "GitHub", 
+      href: "https://github.com/icrowleyshr",
     },
     {
-      icon: "📧",
       label: "Email",
-      href: "mailto:joao.silva@email.com",
+      href: "mailto:gustavogualda6@gmail.com",
     },
     {
-      icon: "📱",
       label: "WhatsApp",
-      href: "https://wa.me/5511999999999",
+      href: "https://wa.me/5511963338067",
     },
   ],
 
