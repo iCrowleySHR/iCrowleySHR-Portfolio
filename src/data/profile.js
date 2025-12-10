@@ -7,7 +7,7 @@ export const profile = {
   clientSatisfaction: "100%",
   description:
     "Transformo ideias em soluções digitais completas. Especialista em React, AWS, Laravel e tecnologias modernas.",
-  image:"../../public/images/profile/icrowleyshr.png",
+  image:"https://portfolio-gamma-liard-91.vercel.app/images/profile/icrowleyshr.png",
   buttons: [
     {
       text: "Ver Projetos",
@@ -16,7 +16,7 @@ export const profile = {
     },
     {
       text: "Baixar Currículo",
-      href: "../../public/files/Gustavo_Gualda_Curriculo.pdf",
+      href: "https://portfolio-gamma-liard-91.vercel.app/files/Gustavo_Gualda_Curriculo.pdf",
       target: "_blank",
       type: "secondary",
     },
