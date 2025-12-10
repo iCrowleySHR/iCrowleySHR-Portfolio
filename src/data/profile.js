@@ -16,7 +16,7 @@ export const profile = {
     },
     {
       text: "Baixar Currículo",
-      href: "https://drive.google.com/file/d/1234567890/view",
+      href: "../../public/files/Gustavo_Gualda_Curriculo.pdf",
       target: "_blank",
       type: "secondary",
     },

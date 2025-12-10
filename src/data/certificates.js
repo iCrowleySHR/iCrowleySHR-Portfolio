@@ -1,4 +1,15 @@
 export const certificates = [
+    {
+    title: "AWS Cloud Practitioner (CLF-C02)",
+    issuer: "AWS - Amazon Web Services",
+    valid: "dez de 2028",
+    code: "f5cd7654-1524-40d9-a32f-f3b4b906371e",
+    url: "https://www.credly.com/badges/f5cd7654-1524-40d9-a32f-f3b4b906371e/public_url",
+    logo: "../../images/logos/aws-logo.png",
+    category: "Cloud",
+    level: "Practitioner",
+    tags: ["Amazon Web Services", "DevOps"]
+  },
   {
     title: "Introduction to FinOps",
     issuer: "FinOps Foundation",

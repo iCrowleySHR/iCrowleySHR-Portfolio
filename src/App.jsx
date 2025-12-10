@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Projects from './components/Projects';
+import Projects from './components/Projects/Projects';
 import Education from './components/Education';
 import Certificates from './components/Certificates';
 import Skills from './components/Skills';

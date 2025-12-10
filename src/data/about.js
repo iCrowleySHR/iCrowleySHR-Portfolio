@@ -5,7 +5,7 @@ export const about = {
   },
   title: "Sobre Mim",
   description: [
-    "Sou um desenvolvedor Full Stack e DevOps apaixonado por criar experiências digitais excepcionais. Com mais de 4 anos de experiência, trabalho com as tecnologias mais modernas do mercado.",
+    "Sou um desenvolvedor Full Stack e DevOps apaixonado por criar experiências digitais excepcionais. Com mais de 4 anos de experiência e certificações AWS, trabalho com as tecnologias mais modernas do mercado.",
     "Minha missão é transformar ideias complexas em soluções simples e eficientes, sempre focando na experiência do usuário e na qualidade do código."
   ],
   skills: [
