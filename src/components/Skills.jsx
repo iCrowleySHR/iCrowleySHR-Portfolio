@@ -1,122 +1,82 @@
 import { frontend, backend, otherSkills } from '../data/skills';
 
 export default function Skills() {
+  const sections = [
+    { title: 'Frontend', icon: '⚛️', skills: frontend, from: 'from-sky-500', to: 'to-blue-600', accent: 'text-sky-400', bg: 'bg-sky-500/10', border: 'border-sky-500/10' },
+    { title: 'Backend', icon: '🖥️', skills: backend, from: 'from-emerald-500', to: 'to-green-600', accent: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/10' },
+  ];
+
   return (
-    <section id="skills" className="py-20 bg-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-[size:16px_16px]"></div>
-      
-      <div className="absolute top-20 left-10 w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
-      <div className="absolute bottom-40 right-20 w-6 h-6 bg-blue-300 rounded-full animate-pulse delay-500"></div>
+    <section id="skills" className="py-28 bg-zinc-900/50 relative overflow-hidden">
+      <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent"></div>
+      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-violet-500/20 to-transparent"></div>
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-sm font-medium">
-            <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+        <div className="text-center mb-16 fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 mb-4 rounded-full bg-violet-500/10 border border-violet-500/20 text-violet-400 text-sm font-medium">
+            <span className="w-1.5 h-1.5 bg-violet-400 rounded-full animate-pulse"></span>
             Tecnologias e ferramentas
           </div>
-
-          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
-            Habilidades Técnicas
+          <h2 className="text-4xl lg:text-5xl font-black text-white mb-4">
+            Habilidades <span className="bg-gradient-to-r from-violet-400 to-pink-400 bg-clip-text text-transparent">Técnicas</span>
           </h2>
-          
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Domino uma ampla gama de tecnologias modernas para desenvolvimento web completo e soluções escaláveis.
+          <p className="text-lg text-zinc-400 max-w-2xl mx-auto">
+            Domino tecnologias modernas para desenvolvimento web completo e soluções escaláveis.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-12">
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center text-white text-xl">
-                ⚛️
+        {/* Frontend + Backend */}
+        <div className="grid lg:grid-cols-2 gap-6 mb-6">
+          {sections.map((section, i) => (
+            <div key={i} className={`bg-zinc-900/60 backdrop-blur-sm p-8 rounded-2xl border border-zinc-800/60`}>
+              <div className={`flex items-center gap-3 mb-8 ${section.bg} ${section.border} border rounded-xl p-4`}>
+                <div className="text-2xl">{section.icon}</div>
+                <h3 className="text-xl font-bold text-white">{section.title}</h3>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Frontend</h3>
-            </div>
-            
-            <div className="space-y-6">
-              {frontend.map((skill, index) => (
-                <div key={index} className="group">
-                  <div className="flex justify-between items-center mb-3">
-                    <div className="flex items-center gap-3">
-                      <img 
-                        src={skill.icon} 
-                        alt={skill.name} 
-                        className="w-6 h-6 rounded-sm"
-                      />
-                      <span className="font-semibold text-gray-900">{skill.name}</span>
+              <div className="space-y-5">
+                {section.skills.map((skill, index) => (
+                  <div key={index} className="group">
+                    <div className="flex justify-between items-center mb-2">
+                      <div className="flex items-center gap-3">
+                        <img src={skill.icon} alt={skill.name} className="w-5 h-5 rounded-sm opacity-70" />
+                        <span className="font-semibold text-zinc-200 text-sm">{skill.name}</span>
+                      </div>
+                      <span className="text-zinc-500 text-sm font-medium">{skill.value}</span>
                     </div>
-                    <span className="text-gray-500 font-medium">{skill.value}</span>
+                    <div className="bg-zinc-800/80 rounded-full h-2 overflow-hidden">
+                      <div
+                        className={`bg-gradient-to-r ${section.from} ${section.to} h-2 rounded-full transition-all duration-1000 ease-out`}
+                        style={{ width: skill.value }}
+                      ></div>
+                    </div>
                   </div>
-                  <div className="bg-gray-100 rounded-full h-3 overflow-hidden">
-                    <div 
-                      className="bg-gradient-to-r from-blue-500 to-blue-600 h-3 rounded-full transition-all duration-1000 ease-out group-hover:from-blue-600 group-hover:to-blue-700"
-                      style={{ width: skill.value }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-            <div className="flex items-center gap-3 mb-8">
-              <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center text-white text-xl">
-                🖥️
+                ))}
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Backend</h3>
             </div>
-            
-            <div className="space-y-6">
-              {backend.map((skill, index) => (
-                <div key={index} className="group">
-                  <div className="flex justify-between items-center mb-3">
-                    <div className="flex items-center gap-3">
-                      <img 
-                        src={skill.icon} 
-                        alt={skill.name} 
-                        className="w-6 h-6 rounded-sm"
-                      />
-                      <span className="font-semibold text-gray-900">{skill.name}</span>
-                    </div>
-                    <span className="text-gray-500 font-medium">{skill.value}</span>
-                  </div>
-                  <div className="bg-gray-100 rounded-full h-3 overflow-hidden">
-                    <div 
-                      className="bg-gradient-to-r from-green-500 to-green-600 h-3 rounded-full transition-all duration-1000 ease-out group-hover:from-green-600 group-hover:to-green-700"
-                      style={{ width: skill.value }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
 
-        <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
-          <div className="flex items-center gap-3 mb-8">
-            <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center text-white text-xl">
-              🛠️
+        {/* Other tools */}
+        <div className={`bg-zinc-900/60 backdrop-blur-sm p-8 rounded-2xl border border-zinc-800/60`}>
+          <div className="bg-violet-500/10 border border-violet-500/10 rounded-xl p-4 mb-8">
+            <div className="flex items-center gap-3">
+              <div className="text-2xl">🛠️</div>
+              <h3 className="text-xl font-bold text-white">Outras Ferramentas</h3>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900">Outras Ferramentas</h3>
           </div>
-          
           <div className="grid md:grid-cols-2 gap-6">
             {otherSkills.map((skill, index) => (
               <div key={index} className="group">
-                <div className="flex justify-between items-center mb-3">
+                <div className="flex justify-between items-center mb-2">
                   <div className="flex items-center gap-3">
-                    <img 
-                      src={skill.icon} 
-                      alt={skill.name} 
-                      className="w-6 h-6 rounded-sm"
-                    />
-                    <span className="font-semibold text-gray-900">{skill.name}</span>
+                    <img src={skill.icon} alt={skill.name} className="w-5 h-5 rounded-sm opacity-70" />
+                    <span className="font-semibold text-zinc-200 text-sm">{skill.name}</span>
                   </div>
-                  <span className="text-gray-500 font-medium">{skill.value}</span>
+                  <span className="text-zinc-500 text-sm font-medium">{skill.value}</span>
                 </div>
-                <div className="bg-gray-100 rounded-full h-3 overflow-hidden">
-                  <div 
-                    className="bg-gradient-to-r from-purple-500 to-purple-600 h-3 rounded-full transition-all duration-1000 ease-out group-hover:from-purple-600 group-hover:to-purple-700"
+                <div className="bg-zinc-800/80 rounded-full h-2 overflow-hidden">
+                  <div
+                    className="bg-gradient-to-r from-violet-500 to-purple-600 h-2 rounded-full transition-all duration-1000 ease-out"
                     style={{ width: skill.value }}
                   ></div>
                 </div>

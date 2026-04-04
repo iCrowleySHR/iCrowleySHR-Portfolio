@@ -1,14 +1,68 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="dark">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gustavo Gualda</title>
-    <!-- Tailwind via CDN for quick setup (works for dev/demo) -->
+    <title>Gustavo Gualda — Desenvolvedor Full Stack | DevOps</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      body { background: #0a0a0c; color: #e4e4e7; }
+    </style>
+    <style>
+      /* custom global scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #0a0a0c; }
+      ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 999px; }
+      ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+
+      /* hero animated gradient */
+      .hero-gradient {
+        background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(57,130,200,0.15), transparent),
+                    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(99,54,226,0.08), transparent);
+      }
+
+      /* glow ring behind profile image */
+      .glow-ring { position: relative; }
+      .glow-ring::before {
+        content: '';
+        position: absolute;
+        inset: -4px;
+        border-radius: 2rem;
+        background: conic-gradient(from 0deg, rgba(56,189,248,0.8), rgba(99,54,226,0.8), rgba(236,72,153,0.8), rgba(56,189,248,0.8));
+        animation: spin 4s linear infinite;
+        z-index: 0;
+      }
+      @keyframes spin { to { transform: rotate(360deg); } }
+
+      /* floating card animation */
+      .float-slow { animation: floatSlow 6s ease-in-out infinite; }
+      .float-fast { animation: floatFast 4s ease-in-out infinite; }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-12px); }
+      }
+      @keyframes floatFast {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-8px) rotate(1deg); }
+      }
+
+      /* fade-in animation */
+      .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+      .fade-in.visible { opacity: 1; transform: none; }
+
+      /* noise texture overlay */
+      .noise::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+    </style>
   </head>
-  <body class="bg-gray-900">
+  <body style="background: #0a0a0c; color: #e4e4e7;">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
