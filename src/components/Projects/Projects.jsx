@@ -46,17 +46,14 @@ export default function Projects() {
             />
           ))}
         </div>
-
-        {!loading && visible < totalRepos && (
-          <div className="text-center mt-14 fade-in">
-            <button
-              onClick={loadMore}
-              className="px-8 py-4 bg-zinc-800 text-zinc-200 rounded-xl font-semibold hover:bg-zinc-700 hover:text-white transition-all duration-300 border border-zinc-700 hover:border-zinc-600 hover:-translate-y-0.5 hover:shadow-lg"
-            >
-              Ver mais projetos
-            </button>
-          </div>
-        )}
+        <div className="text-center mt-14 fade-in">
+          <button
+            onClick={loadMore}
+            className="px-8 py-4 bg-zinc-700 text-white rounded-xl font-semibold hover:bg-zinc-600 transition-all duration-300 shadow-md"
+          >
+            Ver mais projetos
+          </button>
+        </div>
       </div>
     </section>
   );
